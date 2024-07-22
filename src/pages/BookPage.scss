@@ -1,0 +1,106 @@
+.content {
+  width: 1100px;
+  height: 780px;
+  margin: 0 auto;
+  /*padding: 30px 50px;*/
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  background-repeat: no-repeat;
+  /* div {
+    width: 40%;
+  } */
+  .carillas {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 112px);
+    height: calc(100% - 66px);
+    margin: 33px 56px;
+    p{
+      line-height: 2;
+    }
+    .text-content {
+      width: 49%;
+      &.bottom-right {
+        margin-top: 610px;
+        text-align: end;
+        &--large{
+          width: 50%;
+        }
+      }
+      &.bottom-left {
+        margin-top: 610px;
+      }
+      &.top-right {
+        text-align: end;
+      }
+      &.center {
+        margin-top: 180px;
+        text-align: center;
+      }
+      .ft-18 {
+        @media (max-width:576px) {
+          font-size: 14px;
+        }
+      }
+      @media (max-width:576px) {
+        font-size: 12px;
+        color: #724900;
+        &.bottom-left,
+        &.bottom-right,
+        &.center {
+          margin-top: 0;
+        }
+      }
+    }
+    @media (max-width:576px) {
+      margin: 325px auto 20px;
+      width: calc(100% - 40px);
+      div {
+        &:first-child{
+          border-right: 1px solid #724900;
+        }
+        /* border: 1px solid #724900;
+        padding: 20px; */
+      }
+    }
+  }
+  .reproductor {
+    margin-top: -90px;
+    justify-content: center;
+    display: flex;
+    width: 50%;
+    .rhap_container {
+      width: 55%;
+      opacity: 0.7;
+      .rhap_main-controls-button,
+      .rhap_volume-button,
+      .rhap_volume-indicator {
+        color: #000000;
+      }
+      @media (max-width:576px) {
+        width: calc(100% - 40px);
+      }
+    }
+    &.top {
+      margin-top: -746px;
+      @media (max-width:576px) {
+        margin-top: 80px;
+      }
+    }
+    audio {
+      background-color: rgb(255, 38, 0);
+    }
+    @media (max-width:576px) {
+      margin-top: 25px;
+      width: 100% ;
+    }
+  }
+  @media (max-width:576px) {
+    width: 100%;
+    max-height:  360px;
+    background-size: contain;
+  }
+}
+
