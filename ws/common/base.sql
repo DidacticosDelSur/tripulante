@@ -2,42 +2,34 @@
 CREATE DATABASE `tripulantes`;
 
 CREATE TABLE `libros` (
-	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`titulo` VARCHAR(100) NOT NULL DEFAULT '',
-	`link` VARCHAR(100) NOT NULL DEFAULT '',
-	PRIMARY KEY (`id`)
-)
-ENGINE=MyISAM
-;
+  `id` int(11) NOT NULL,
+  `titulo` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `link` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `portada` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `paginas` (
-	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`libro_id` INT(11) NOT NULL,
-	`nro` INT(11) NOT NULL,
-	`primera` TINYINT(4) NULL DEFAULT NULL COMMENT '1 si es la primer página',
-	`ultima` TINYINT(4) NULL DEFAULT NULL COMMENT '1 si es la última página',
-	`imagen` VARCHAR(100) NOT NULL DEFAULT '',
-	`imagen_mobile` VARCHAR(100) NOT NULL DEFAULT '',
-	PRIMARY KEY (`id`)
-)
-ENGINE=MyISAM
-;
+CCREATE TABLE `paginas` (
+  `id` int(11) NOT NULL,
+  `libro_id` int(11) NOT NULL,
+  `nro` int(11) NOT NULL,
+  `primera` tinyint(4) DEFAULT NULL COMMENT '1 si es la primer página',
+  `ultima` tinyint(4) DEFAULT NULL COMMENT '1 si es la última página',
+  `imagen` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `imagen_mobile` varchar(100) COLLATE utf8_unicode_ci NOT NULL DEFAULT ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 CREATE TABLE `audios` (
-	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`pagina_id` INT(11) NOT NULL DEFAULT '0',
-	`archivo` VARCHAR(100) NOT NULL DEFAULT '' COMMENT 'Ruta del audio',
-	`ubicacion` VARCHAR(50) NOT NULL DEFAULT '' COMMENT 'ubicacion del reproductor si es distinto de bottom',
-	PRIMARY KEY (`id`)
-)
-COLLATE='utf8_spanish_ci'
-ENGINE=MyISAM
+  `id` int(11) NOT NULL,
+  `pagina_id` int(11) NOT NULL DEFAULT '0',
+  `archivo` varchar(100) COLLATE utf8_spanish_ci NOT NULL DEFAULT '' COMMENT 'Ruta del audio',
+  `ubicacion` varchar(50) COLLATE utf8_spanish_ci NOT NULL DEFAULT '' COMMENT 'ubicacion del reproductor si es distinto de bottom'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
 CREATE TABLE `parrafos` (
-	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`pagina_id` INT(11) NOT NULL DEFAULT '0',
-	`texto` TEXT NOT NULL COLLATE 'utf8_spanish_ci',
-	`carilla` TINYINT(4) NOT NULL DEFAULT '1' COMMENT 'Si pertenece a la carilla 1 o 2 de la pagina',
-	`ubicacion` VARCHAR(50) NULL DEFAULT '' COMMENT 'lugar del texto en la carilla' COLLATE 'utf8_spanish_ci',
-	`estilos` VARCHAR(50) NULL DEFAULT '' COMMENT 'estilos del texto' COLLATE 'utf8_spanish_ci',
-	PRIMARY KEY (`id`)
-)
-COLLATE='utf8_spanish_ci'
+  `id` int(11) NOT NULL,
+  `pagina_id` int(11) NOT NULL DEFAULT '0',
+  `texto` text COLLATE utf8_spanish_ci NOT NULL,
+  `carilla` tinyint(4) NOT NULL DEFAULT '1' COMMENT 'Si pertenece a la carilla 1 o 2 de la pagina',
+  `ubicacion` varchar(50) COLLATE utf8_spanish_ci DEFAULT '' COMMENT 'lugar del texto en la carilla',
+  `estilos` varchar(50) COLLATE utf8_spanish_ci DEFAULT '' COMMENT 'estilos del texto'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
