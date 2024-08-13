@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useFetch } from "../services/useFetch";
-import { Image } from "react-bootstrap";
+import { Col, Container , Image /**/, Row } from "react-bootstrap";
 
 export default function Home() {
   const baseURL = process.env.REACT_APP_WEB_SERVICES + "getBooks.php";
@@ -9,15 +9,21 @@ export default function Home() {
   return (
     <>
       {isloading && <div>Loading</div>}
-      {allData &&
-        allData.map((l) => {
-          return (
-            <Link to={`${l.cuento}/1`}>
-              {" "}
-              <Image src={l.portada} />{" "}
-            </Link>
-          );
-        })}
+      <Container>
+        <Row>
+          {allData &&
+            allData.map((l) => {
+              return (
+                <Col key={`${l.cuento}`}>
+                  <Link to={`${l.cuento}/1`}>
+                   <span>{l.titulo}</span>
+                    < Image src={l.portada} />{" "} 
+                  </Link>
+                </Col>
+              );
+          })}
+        </Row>
+      </Container>
     </>
   );
 }

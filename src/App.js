@@ -17,10 +17,15 @@ function App() {
 
   return (
     <>
-      {params.link && headerData && <Header data={headerData} />}
-      <div className="App">
+      {params.link && <div className={"App " + params.link }>
+        {params.link && headerData && <Header data={headerData} />}
+          <Outlet />
+        </div>
+      }
+      {!params.link && <div className="App Home">
         <Outlet />
-      </div>
+        </div>
+      }
     </>
   );
 }

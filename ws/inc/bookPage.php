@@ -17,7 +17,8 @@ Class BookPage {
       $s = "SELECT * FROM paginas pag
             LEFT JOIN parrafos par ON pag.id = par.pagina_id
             LEFT JOIN libros l ON l.id = pag.libro_id
-            WHERE pag.id = ? AND l.link = ? order by par.carilla asc";
+            WHERE pag.nro = ? AND l.link = ? order by par.id asc";
+            error_log($s);
       $q = $this->conn->prepare($s);
       $q->execute([$page,$book]);
       $row = $q->fetchAll(PDO::FETCH_ASSOC);
@@ -38,8 +39,10 @@ Class BookPage {
       $s = "SELECT * from audios a
             left join paginas pag on pag.id = a.pagina_id
             left join libros l on l.id = pag.libro_id
-            WHERE pag.id = ? AND l.link = ?";
+            WHERE pag.nro = ? AND l.link = ?";
       $q = $this->conn->prepare($s);
+      error_log($s);
+
       $q->execute([$page,$book]);
       $row = $q->fetchAll(PDO::FETCH_ASSOC);
       if (count($row)>0) {
@@ -71,7 +74,8 @@ Class BookPage {
             p.nro - 1 AS pagAnt,
             p.nro + 1 AS pagSig
             FROM libros l LEFT JOIN paginas p ON p.libro_id = l.id
-            WHERE l.link = ? AND p.id = ?";
+            WHERE l.link = ? AND p.nro = ?";
+      error_log($s);
       $q = $this->conn->prepare($s);
       $q->execute([$book,$page]);
       $row = $q->fetchAll(PDO::FETCH_ASSOC);

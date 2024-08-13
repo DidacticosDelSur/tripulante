@@ -1,0 +1,220 @@
+.reproductor {
+  .rhap_container {
+    /* width: 55%;
+    opacity: 0.7; */
+    width: 100%;
+    /* height: 100%; */
+    background-color: transparent;
+    box-shadow: none;
+    .rhap_progress-section {
+      margin-top: 50px;
+      @media (max-width: 576px){
+        margin-top: 25px;
+      }
+      @media (max-width: 320px){
+        margin-top: 54px;
+      }
+
+    }
+    .rhap_progress-container {
+      margin: 0 calc(25px + 1%);
+      height: 53px;
+      padding: 0 55px;
+      border-radius: 50px;
+      @media (max-width: 576px){
+        margin: 0 calc(10px + 1%);
+        height: 37px;
+        padding: 0 30px;
+      }
+      @media (max-width: 320px){
+        height: 25px;
+        padding: 0 15px;
+      }
+    }
+    .rhap_volume-container {
+      flex: 0 0 150px;
+      @media (max-width: 576px){
+        flex: 0 0 130px;
+      }
+    }
+    .rhap_play-pause-button{
+      width: 123px;
+      height: 123px;
+      font-size: 123px;
+      @media (max-width: 576px){
+        width: 90px;
+        height: 90px;
+        font-size: 90px;
+      }
+      @media (max-width: 320px){
+        width: 75px;
+        height: 75px;
+        font-size: 75px;
+      }
+    }
+    .rhap_repeat-button, 
+    .rhap_volume-button {
+      width: 63px;
+      height: 63px;
+      border-radius: 100%;
+      font-size: 29px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      color: #FFFFFF;
+      @media (max-width: 576px){
+        width: 53px;
+        height: 53px;
+        font-size: 20px;
+      }
+      @media (max-width: 320px){
+        width: 33px;
+        height: 33px;
+        font-size: 19px;
+      }
+    }
+    .rhap_volume-button {
+      flex: 0 0 63px;
+      @media (max-width: 576px){
+        flex: 0 0 53px;
+      }
+      @media (max-width: 320px){
+        flex: 0 0 33px;
+      }
+    }
+    .rhap_volume-bar-area {
+      height: 50px;
+      border-radius: 30px;
+      padding: 0 15px;
+      @media (max-width: 576px){
+        height: 30px;
+      }
+      @media (max-width: 320px){
+        height: 25px;
+      }
+    }
+    .rhap_volume-indicator,
+    .rhap_progress-indicator {
+      background: #FFFFFF;
+    }
+    /* @media (max-width:576px) {
+      width: calc(100% - 40px);
+    } */
+  }
+}
+.LosTresChanchitos {
+  .content {
+    .reproductor {
+      .rhap_container {
+        .rhap_main-controls-button {
+          color: #2a9e8f;
+        }
+        .rhap_repeat-button,
+        .rhap_volume-button,
+        .rhap_volume-bar-area,
+        .rhap_progress-container {
+          background-color: #2a9e8f;
+        }
+      }
+      .btn-ant {
+        background-image: url(../assets/ChanchitosAnt.png);
+        @media (max-width: 536px) {
+          background-image: url(../assets/ChanchitosAnt_mobile.png);
+        }
+      }
+      .btn-sig {
+        background-image: url(../assets/ChanchitosSig.png);
+        @media (max-width: 536px) {
+          background-image: url(../assets/ChanchitosSig_mobile.png);
+        }
+      }
+    }
+  }
+}
+.Pinocho {
+  .content {
+    .reproductor {
+      .rhap_container {
+        .rhap_main-controls-button {
+          color: #8db623;
+        }
+        .rhap_repeat-button,
+        .rhap_volume-button,
+        .rhap_volume-bar-area,
+        .rhap_progress-container {
+          background-color: #8db623;
+        }
+      }
+      .btn-ant {
+        background-image: url(../assets/PinochoAnt.png);
+        @media (max-width: 536px) {
+          background-image: url(../assets//PinochoAnt_mobile.png);
+        }
+      }
+      .btn-sig {
+        background-image: url(../assets/PinochoSig.png);
+        @media (max-width: 536px) {
+          background-image: url(../assets/PinochoSig_mobile.png);
+        }
+      }
+    }
+  }
+}
+.Caperucita {
+  .content {
+    .reproductor {
+      .rhap_container {
+        .rhap_main-controls-button {
+          color: #e00b1d;
+        }
+        .rhap_repeat-button,
+        .rhap_volume-button,
+        .rhap_volume-bar-area,
+        .rhap_progress-container {
+          background-color: #e00b1d;
+        }
+      }
+      .btn-ant {
+        background-image: url(../assets/CaperucitaAnt.png);
+        @media (max-width: 536px) {
+          background-image: url(../assets/CaperucitaAnt_mobile.png);
+        }
+      }
+      .btn-sig {
+        background-image: url(../assets/CaperucitaSig.png);
+        @media (max-width: 536px) {
+          background-image: url(../assets/CaperucitaSig_mobile.png);
+        }
+      }
+    }
+  }
+}
+.Blancanieves {
+  .content {
+    .reproductor {
+      .rhap_container {
+        .rhap_main-controls-button {
+          color: #f09281;
+        }
+        .rhap_repeat-button,
+        .rhap_volume-button,
+        .rhap_volume-bar-area,
+        .rhap_progress-container {
+          background-color: #f09281;
+        }
+      }
+      .btn-ant {
+        background-image: url(../assets/BlancaAnt.png);
+        @media (max-width: 536px) {
+          background-image: url(../assets/BlancaAnt_mobile.png);
+        }
+      }
+      .btn-sig {
+        background-image: url(../assets/BlancaSig.png);
+        @media (max-width: 536px) {
+          background-image: url(../assets/BlancaSig_mobile.png);
+        }
+      }
+    }
+  }
+}

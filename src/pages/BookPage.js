@@ -1,4 +1,5 @@
 import "./BookPage.scss";
+import "./Reproductor.scss";
 import "react-h5-audio-player/src/styles.scss";
 import { useParams } from "react-router-dom";
 import BookPageComponent from "../components/BookPageComponent";
@@ -15,9 +16,10 @@ export default function BookPage() {
       {data && (
         <BookPageComponent
           pag={params.page}
-          backgroundImage={data.imagen}
-          texto={data.textos}
-          audio={data.audio}
+          backgroundImage={data.pag.imagen}
+          texto={data.pag.textos}
+          audio={data.pag.audio}
+          header={data.data}
         />
       )}
     </>
