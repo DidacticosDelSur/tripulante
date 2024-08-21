@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
 import { Link } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
 export default function BookPageComponent(props) {
   console.log(props);
@@ -18,20 +19,38 @@ export default function BookPageComponent(props) {
               props.header.antDisabled ? "btn-ant disabled-link" : "btn-ant"
             }
           ></Button>
-          <AudioPlayer
-            autoPlay
-            showJumpControls={false}
-            customAdditionalControls={[]}
-            layout="stacked-reverse"
-            customProgressBarSection={
-              [
-                RHAP_UI.VOLUME,
-                RHAP_UI.PROGRESS_BAR,
-              ]
-            }
-            customVolumeControls={[]}
-            src={props.audio.file}
-          />
+          {isMobile && 
+            <AudioPlayer
+              autoPlay
+              showJumpControls={false}
+              customAdditionalControls={[]}
+              layout="stacked-reverse"
+              customProgressBarSection={
+                [
+                  RHAP_UI.PROGRESS_BAR,
+                ]
+              }
+              customVolumeControls={[]}
+              src={props.audio.file}
+            />
+          }
+          { !isMobile && 
+            <AudioPlayer
+              autoPlay
+              showJumpControls={false}
+              customAdditionalControls={[]}
+              layout="stacked-reverse"
+              customProgressBarSection={
+                [
+                  RHAP_UI.VOLUME,
+                  RHAP_UI.PROGRESS_BAR,
+                ]
+              }
+              customVolumeControls={[]}
+              src={props.audio.file}
+            />
+          }
+
           <Button
             as={Link}
              to={`/${props.header.cuento}/${props.header.pagSig}`} 

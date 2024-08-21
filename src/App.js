@@ -18,11 +18,12 @@ function App() {
   return (
     <>
       {params.link && <div className={"App " + params.link }>
-        {params.link && headerData && <Header data={headerData} />}
+        {params.link && headerData && <Header titulo={headerData.titulo} />}
           <Outlet />
         </div>
       }
       {!params.link && <div className="App Home">
+        <Header titulo='Audio Libros'/>
         <Outlet />
         </div>
       }

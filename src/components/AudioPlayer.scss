@@ -1,0 +1,42 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .main-content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    .image-content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      button {
+        position: absolute;
+        width: 123px;
+        height: 123px;
+        top: 30%;
+        left: 30%;
+        background-color: transparent;
+        background-size: contain;
+        border-radius: 100%;
+        border: none;
+        &.play {
+          background-image: url(../assets/PinochoPlay.png);
+        }
+        &.pause {
+          background-image: url(../assets/PinochoPause.png);
+        }
+      }
+      .volumen-input {
+        transform: rotate(-90deg);
+        transform-origin: left 0;
+      }
+      .volumen-button {
+        background-image: url(../assets/PinochoVolumen.png);
+        height: 123px;
+        width: 123px;
+      }
+    }
+  }
+}

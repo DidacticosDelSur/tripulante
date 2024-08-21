@@ -7,12 +7,12 @@
     background-color: transparent;
     box-shadow: none;
     .rhap_progress-section {
-      margin-top: 50px;
+      margin-top: 94px;
       @media (max-width: 576px){
-        margin-top: 25px;
+        margin-top: 68px;
       }
       @media (max-width: 320px){
-        margin-top: 54px;
+        margin-top: 32px;
       }
 
     }
@@ -33,23 +33,34 @@
     }
     .rhap_volume-container {
       flex: 0 0 150px;
-      @media (max-width: 576px){
-        flex: 0 0 130px;
-      }
     }
     .rhap_play-pause-button{
-      width: 123px;
-      height: 123px;
-      font-size: 123px;
-      @media (max-width: 576px){
-        width: 90px;
-        height: 90px;
-        font-size: 90px;
+      width: 102px;
+      height: 102px;
+      font-size: 124px;
+      /* background-color: #FFFFFF; */
+      border-radius: 100%;
+      svg {
+        margin-left: -11px;
+        margin-top: -11px;
       }
-      @media (max-width: 320px){
+      @media (max-width: 576px){
         width: 75px;
         height: 75px;
-        font-size: 75px;
+        font-size: 92px;
+        svg {
+          margin-left: -9px;
+          margin-top: -11px;
+        }
+      }
+      @media (max-width: 320px){
+        width: 62px;
+        height: 62px;
+        font-size: 74px;
+        svg {
+          margin-left: -6px;
+          margin-top: -6px;
+        }
       }
     }
     .rhap_repeat-button, 
@@ -67,39 +78,19 @@
         height: 53px;
         font-size: 20px;
       }
-      @media (max-width: 320px){
-        width: 33px;
-        height: 33px;
-        font-size: 19px;
-      }
     }
     .rhap_volume-button {
       flex: 0 0 63px;
-      @media (max-width: 576px){
-        flex: 0 0 53px;
-      }
-      @media (max-width: 320px){
-        flex: 0 0 33px;
-      }
     }
     .rhap_volume-bar-area {
       height: 50px;
       border-radius: 30px;
       padding: 0 15px;
-      @media (max-width: 576px){
-        height: 30px;
-      }
-      @media (max-width: 320px){
-        height: 25px;
-      }
     }
     .rhap_volume-indicator,
     .rhap_progress-indicator {
       background: #FFFFFF;
     }
-    /* @media (max-width:576px) {
-      width: calc(100% - 40px);
-    } */
   }
 }
 .LosTresChanchitos {
@@ -176,15 +167,15 @@
       }
       .btn-ant {
         background-image: url(../assets/CaperucitaAnt.png);
-        @media (max-width: 536px) {
+        /* @media (max-width: 536px) {
           background-image: url(../assets/CaperucitaAnt_mobile.png);
-        }
+        } */
       }
       .btn-sig {
         background-image: url(../assets/CaperucitaSig.png);
-        @media (max-width: 536px) {
+       /*  @media (max-width: 536px) {
           background-image: url(../assets/CaperucitaSig_mobile.png);
-        }
+        } */
       }
     }
   }

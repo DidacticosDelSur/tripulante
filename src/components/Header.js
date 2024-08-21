@@ -1,8 +1,6 @@
 import "./Header.scss";
 import "./Buttons.scss";
-import { Button, Image } from "react-bootstrap";
-import { SkipBackward, SkipForward } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+import { Image } from "react-bootstrap";
 import Logo from "../logo.svg";
 
 export default function Header(props) {
@@ -10,26 +8,7 @@ export default function Header(props) {
     <>
       <header>
       <Image src={Logo} />
-        {/* <Button
-          as={Link}
-          to={`/${props.data.cuento}/${props.data.pagAnt}`}
-          className={
-            props.data.antDisabled ? "btn-circle disabled-link" : "btn-circle"
-          }
-        >
-          <SkipBackward />
-        </Button> */}
-        <div className="title">{props.data.titulo}</div>
-        
-        {/* <Button
-          as={Link}
-          to={`/${props.data.cuento}/${props.data.pagSig}`}
-          className={
-            props.data.sigDisabled ? "btn-circle disabled-link" : "btn-circle "
-          }
-        >
-          <SkipForward />
-        </Button> */}
+        {props.titulo && <div className="title">{props.titulo}</div>}
       </header>
     </>
   );

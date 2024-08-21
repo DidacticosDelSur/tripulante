@@ -39,6 +39,7 @@ header {
   }
   @media (max-width:420px) {
     max-width: calc(100% - 30px);
+    height: 80px;
   }
 }
 .LosTresChanchitos {
@@ -59,5 +60,10 @@ header {
 .Blancanieves {
   header {
     background-color: #f09281;
+  }
+}
+.Home {
+  header {
+    background-color: #9995E0;
   }
 }
